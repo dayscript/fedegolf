@@ -1,0 +1,17 @@
+{
+    "plugins": [
+        "mobi.monaca.plugins.Monaca",
+        "org.apache.cordova.device-motion",
+        "org.apache.cordova.camera",
+        "org.apache.cordova.device-orientation",
+        "org.apache.cordova.geolocation",
+        "org.apache.cordova.network-information",
+        "org.apache.cordova.vibration",
+        "org.apache.cordova.contacts",
+        "org.apache.cordova.splashscreen",
+        "org.apache.cordova.device",
+        "org.apache.cordova.statusbar"
+    ],
+    "framework_version": "3.5",
+    "xcode_version": "5"
+}

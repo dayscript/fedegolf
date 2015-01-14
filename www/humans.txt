@@ -1,0 +1,23 @@
+/* THANKS */
+	Front-end developer: William Villalba
+	Email:williamvillalba_@hotmail.com 
+	From: Colombia, Bogotá
+		
+
+/* SITE */
+	Last update:07/05/2014
+	Language: Castellano
+	Doctype:HTML5
+	IDE: Sublime Text, FileZilla, Photoshop
+
+
+
+/* TECHNOLOGY */
+	HTML5,
+	CSS3
+	Normalize.css,
+	jQuery,
+	jQuery Mobile,
+	Modernizr,
+	Cordova,
+	Ajax

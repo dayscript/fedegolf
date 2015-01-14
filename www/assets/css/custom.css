@@ -1,0 +1,11 @@
+.ui-loader-verbose{
+	background: #000;
+	color: red;
+	font-weight: bolder;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.ui-loader-verbose .ui-icon-loading{
+	background: url("../images/icons/error.png") no-repeat fixed center;
+}

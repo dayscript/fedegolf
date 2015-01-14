@@ -1,0 +1,1944 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>FEDEGOLF</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="author" type="text/plain" href="humans.txt" />
+    <!---Monaca Importaciones and Jquery-->
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">    
+    <!--Style's-->
+    <link rel="stylesheet" href="assets/css/fedegolf.css">
+    <!--Plungis-->
+    <script src="assets/js/lib/plug.js"></script>
+    <script src="assets/js/app.js"></script>    
+    <script src="assets/js/fedegolf-clubes.js"></script>
+    <script src="assets/js/fedegolf-aficionados.js"></script>
+    <script src="assets/js/fedegolf-profesionales.js"></script>
+    <script src="assets/js/fedegolf-generics.js"></script>
+</head>
+
+<body>
+<section id="preload">
+    <div class="padding">
+      <img src="assets/images/logo_landing.png" alt="" class="wow bounceIn" data-wow-delay="0.1s">
+       <hr>
+      <!--Patrocinio-->
+      <ul class="patrocinadores small-12 medium-12 large-12">
+        <li class="small-6 medium-6 large-6 columns wow rotateInUpLeft" data-wow-delay="0.3s">
+          <img src="assets/images/patrocionio1.png" alt="">
+        </li>
+        <li class="small-6 medium-6 large-6 columns wow rotateInUpRight padding_t_l" data-wow-delay="0.4s">
+          <img src="assets/images/patrocionio2.png" alt="">
+        </li>
+         <div class="clear"></div>
+      </ul>
+      <!--Fin Patrocinio-->
+    </div>
+</section>
+
+<!--Vista 1-->
+<section class="content_all bg_blur" data-role="page" id="menu">
+      
+    <section data-role="content">
+        <!--Buscador-->
+        <!--<div class="buscador">
+          <form action="index.html" role="form" enctype="multipart/form-data" method="">                  
+                <input type="text" name="shearch" class="search" maxlength="100" placeholder="Consulta de handicap">
+                <button type="submit" class="btn_bucador"></button>
+          </form>     
+          <span>Nombre, apellido, código o cédula</span>
+            <div class="clear"></div>                
+        </div>
+        <!--Fin Buscador-->
+          <div class="clear"></div>        
+        <!--Menu-->
+        <nav>
+          <a href="" class="logo wow flipInY"><img src="assets/images/logo.png" alt=""></a>
+          <!--Login-->
+          <form class="marco_login elem_blancos wow fadeInUp" data-wow-delay="0.4s" action="#menu_logueado" method="">
+                <a href="" class="btn_azul"><i></i>INGRESAR</a>
+             <article class="form_login animated fadeInUp">
+                <fieldset class="fila">
+                   <input type="text" class="alts-inputMail" name="Login[email]" placeholder="johndoe@mail.com">
+                </fieldset>
+                <fieldset class="fila">
+                   <input type="password" class="alts-inputPass" name="Login[password]" placeholder="Contraseña">
+                </fieldset>
+                 
+                <div class="small-6 medium-6 large-6 columns padding_r">
+                    <a href="#menu_logueado" data-transition="pop">
+                        <button type="submit" class="btn_azul alts-btnLogin" name="btnLogin">Login</button>
+                    </a>
+                </div>
+                <div class="small-6 medium-6 large-6 columns padding_l">
+                    <a href="#registrarse" data-transition="slidedown">
+                        <button type="submit" class="btn_azul" name="btnRegistro">Registrarse</button>
+                    </a>
+                </div>
+                <!-- <a href="javascript:void(0)" class="link2 link_recup_pass">¿Olvidaste tu contraseña?</a>   -->
+             </article>           
+          </form>
+          <!--Fin Login-->
+          <ul>
+            <li><a href="#filtro_aficionado" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.1s">Aficionados</a></li>
+            <li><a href="#clubes" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.2s">Clubes</a></li>
+            <li><a href="#filtro_profesional" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.3s">Profesionales</a></li>
+            <li><a href="#reglas" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.4s">Reglas de Golf</a></li>
+            <li><a href="#handicap" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.5s">Handicap</a></li>
+          </ul>
+        </nav>
+        <!--Fin Menu-->
+          <div class="clear"></div>
+        <!--Patrocinio-->
+        <ul class="patrocinadores small-12 medium-12 large-12">
+          <li class="small-6 medium-6 large-6 columns wow rotateInUpLeft" data-wow-delay="0.6s">
+            <a href=""><img src="assets/images/patrocionio1.png" alt=""></a>
+          </li>
+          <li class="small-6 medium-6 large-6 columns wow rotateInUpRight" data-wow-delay="0.6s">
+            <a href=""><img src="assets/images/patrocionio2.png" alt=""></a>
+          </li>
+           <div class="clear"></div>
+        </ul>
+        <!--Fin Patrocinio-->
+    </section>
+
+    <div class="clear"></div>
+</section>
+<section class="content_all bg_blur" data-role="page" id="menu_logueado">
+      
+    <section data-role="content">
+        <!--Buscador-->
+        <!--<div class="buscador">
+          <form action="index.html" role="form" enctype="multipart/form-data" method="">                  
+                <input type="text" name="shearch" class="search" maxlength="100" placeholder="Consulta de handicap">
+                <button type="submit" class="btn_bucador"></button>
+          </form>     
+          <span>Nombre, apellido, código o cédula</span>
+            <div class="clear"></div>                
+        </div>
+        <!--Fin Buscador-->
+          <div class="clear"></div>        
+        <!--Menu-->
+        <nav>
+          <a href="" class="logo wow flipInY"><img src="assets/images/logo.png" alt=""></a>
+          <ul>
+            <li><a href="#filtro_aficionado" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.1s">Aficionados</a></li>
+            <li><a href="#clubes" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.2s">Clubes</a></li>
+            <li><a href="#filtro_profesional" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.3s">Profesionales</a></li>
+            <li><a href="#reglas" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.4s">Reglas de Golf</a></li>
+            <li><a href="#handicap" data-transition="slide" class="wow fadeInUp" data-wow-delay="0.5s">Handicap</a></li>
+          </ul>
+        </nav>
+        <!--Fin Menu-->
+          <div class="clear"></div>
+          <h1 id="alts-datosCliente"></h1>
+        <!--Patrocinio-->
+        <ul class="patrocinadores small-12 medium-12 large-12">
+          <li class="small-6 medium-6 large-6 columns wow rotateInUpLeft" data-wow-delay="0.6s">
+            <a href=""><img src="assets/images/patrocionio1.png" alt=""></a>
+          </li>
+          <li class="small-6 medium-6 large-6 columns wow rotateInUpRight" data-wow-delay="0.6s">
+            <a href=""><img src="assets/images/patrocionio2.png" alt=""></a>
+          </li>
+           <div class="clear"></div>
+        </ul>
+        <!--Fin Patrocinio-->
+    </section>
+
+    <div class="clear"></div>
+</section>
+<!--Fin Vista 1-->
+
+<!--Vista 2-->
+<section class="content_all bg_internas" data-role="page" id="aficionado"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Aficionados</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+      <ul class="carrusel_int1">    
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)"></a></li>
+                  <li><a href="javascript:void(0)" class="active">Perfil</a></li>
+                  <li><a href="javascript:void(0)" class="next_carr">Handicap</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+
+          <!--Pefil-->
+          <div class="bg_perfil">
+            <div class="small-4 medium-4 large-4 columns">
+               <div class="img_perfil wow flipInY" data-wow-delay="0.2s">
+                  <img src="" alt="">
+               </div>
+            </div>        
+            <div class="small-8 medium-8 large-8 columns datos_perfil wow fadeInRight" data-wow-delay="0.3s">
+              <h2 id="alts-nombreGolfista">Juan Pablo Ruiz</h2>
+              <span><i><img src="assets/images/icons/icon_lugar.png" alt=""></i><div id="alts-ciudadGolfista"></div></span>          
+              <!--<a href="" class="btn_azulc">Seguir</a>-->
+                <div class="clear"></div>
+            </div> 
+              
+              <div class="clear"></div>
+
+            <div class="small-12 medium-12 large-12 columns estadis_perfil">
+              <div class="small-4 medium-4 large-4 columns">
+                <h3 id="alts-codigoGolfista">2700</h3>
+                <h4>Código</h4>
+              </div>  
+              <div class="small-4 medium-4 large-4 columns">
+                <h3 id="alts-indiceAnteriorGolfista">11.5</h3>
+                <h4>Indice Anterior</h4>
+                <p>Corte a 30 de mes</p>
+              </div>  
+              <div class="small-4 medium-4 large-4 columns">
+                <h3 id="alts-indiceGolfista">10.3</h3>
+                <h4>Indice</h4>
+              </div> 
+              <div class="small-8 medium-8 large-8 columns">          
+                <h4>Categoría:</h4>
+                <h4><strong id="alts-categoriaGolfista">Pre Senior Caballeros</strong></h4>
+                <!--<h5>Valido hasta: <strong>07/07/07</strong></h5>-->
+              </div> 
+              <div class="small-4 medium-4 large-4 columns">
+                <div class="logo_torneo wow pulse" data-wow-delay="0.5s">
+                  <img id="alts-imgClubGolfista" src="" alt="">
+                </div>
+              </div>    
+            </div>   
+             
+              <div class="clear"></div>
+          </div>    
+          <!--Fin Pefil-->
+
+          <!--Handicap-->
+          <ul class="list_hand bg_active">                    
+              <li>
+                  <div class="datos_hand">
+                     <i></i>Consulta de handicap
+                  </div>
+                  <div class="info_had">
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Fecha Juego</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-fechaHandicap">21/06/2014</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Club</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-clubHandicap">Los Lagartos  </p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Cancha</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-canchaHandicap">David Gutierrez</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Marca</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-marcaHandicap">Azul</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Score Ajustado </strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-scoreAjustado">91</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Patron Campo</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-patronCampoHandicap">72.0</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Patron Curva </strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-patronCurvaHandicap">13.7</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Indice </strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-indiceHandicap">13.7</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Diferencial </strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p id="alts-diferencialHandicap">13.7</p>
+                      </div>
+                    </article>
+
+
+                     <div class="clear"></div>
+                  </div>
+              </li>     
+          </ul>
+          <!--Fin Handicap-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Perfil</a></li>
+                  <li><a href="javascript:void(0)" class="active">Handicap</a></li>
+                  <li><a href="javascript:void(0)">Ranking</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+          <!--Pefil-->
+          <div class="bg_info margin_bg wow fadeInUp" data-wow-delay="0.4s">
+            <h1>¿Qué es un Handicap?</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+                <section class="text text_dos alts-queesHandicap">
+                    
+                </section>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Handicap</a></li>
+                  <li><a href="javascript:void(0)"  class="active">Ranking</a></li>
+                  <li><a href="javascript:void(0)">Inscripción a torneos</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+          <!--Pefil-->
+          <div class="bg_info margin_bg wow fadeInUp" data-wow-delay="0.4s">
+            <h1>Consulta de Ranking</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+              <section class="list_ranting" id="alts-categoriasRanking">
+                
+              </section>
+                <div class="clear"></div>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Ranking</a></li>
+                  <li><a href="javascript:void(0)" class="active">Inscripción a torneos</a></li>
+                  <li><a href="javascript:void(0)"></a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+          <!--Pefil-->
+          <div class="bg_info margin_bg wow fadeInUp" data-wow-delay="0.4s">
+            <h1>Listado de torneos activos</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+              <section class="list_torneos">
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+              </section>
+                <div class="clear"></div>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+      </ul>
+  
+      <!--Footer-->
+      <footer data-role="footer" data-position="fixed" class="wow fadeInUp">
+        <h3>Patrocina:</h3>
+        <img src="assets/images/patrocionio2.png" alt="">
+         <div class="clear"></div>
+      </footer>  
+      <!--Fin Footer-->
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Vista 2-->
+    
+    <!--Detalle Torneo-->
+    <section class="content_all bg_internas" data-role="page" id="aficionadoRank">   
+      <!--bg degradado-->
+      <section class="bg_deg">
+        <div class="titulo titulo_c wow fadeInDown">
+            <a href="#aficionado" data-rel="back" class="close_int"></a>
+              <h1>Perfil</h1> 
+            <a href="#menu" data-rel="back" class="btn_top"></a>
+           <div class="clear"></div>
+        </div> 
+          <div class="clear"></div>
+        <!--Pefil-->
+        <div class="bg_info margin_bg_dos wow fadeInUp" data-wow-delay="0.4s">
+            <div class="clear"></div>
+          <div class="perfilRanking">
+
+             <div class="clear"></div>
+          </div>
+            <div class="clear"></div>
+        </div>    
+        <!--Fin Pefil-->          
+
+          <div class="clear"></div>
+      </section>
+      <!--bg degradado-->       
+      <div class="clear"></div>
+    </section>
+
+    <section class="content_all bg_internas" data-role="page" id="aficionadoRank2">   
+      <!--bg degradado-->
+      <section class="bg_deg">
+        <div class="titulo titulo_c wow fadeInDown">
+            <a href="#aficionado" data-rel="back" class="close_int"></a>
+              <h1>Perfil</h1> 
+            <a href="#menu" data-rel="back" class="btn_top"></a>
+           <div class="clear"></div>
+        </div> 
+          <div class="clear"></div>
+        <!--Pefil-->
+        <div class="bg_info margin_bg_dos wow fadeInUp" data-wow-delay="0.4s">
+            <div class="clear"></div>
+          <div class="perfilRanking2">
+
+             <div class="clear"></div>
+          </div>
+            <div class="clear"></div>
+        </div>    
+        <!--Fin Pefil-->          
+
+          <div class="clear"></div>
+      </section>
+      <!--bg degradado-->       
+      <div class="clear"></div>
+    </section>
+
+    <!--Detalle Torneo-->
+    <section class="content_all bg_internas" data-role="page" id="torneo">   
+      <!--bg degradado-->
+      <section class="bg_deg">
+        <div class="titulo titulo_c wow fadeInDown">
+            <a href="#aficionado" data-rel="back" class="close_int"></a>
+              <h1>Torneos</h1> 
+            <a href="#menu" data-rel="back" class="btn_top"></a>
+           <div class="clear"></div>
+        </div> 
+          <div class="clear"></div>
+        <!--Pefil-->
+        <div class="bg_info margin_bg_dos wow fadeInUp" data-wow-delay="0.4s">
+          <h1 class="altsTorneoDetail-nombreTorneo">Campeonato Nal. Interclubes “Copa Fedegolf”</h1>
+            <div class="clear"></div>
+          <div class="text_info text_torneo">
+            <p><span class="altsTorneoDetail-club">Club: Pueblo Viejo</span></p>
+            <p><span class="altsTorneoDetail-fechaIni">Fecha: October 27 a Octubre 31 de 2011 </span></p>
+            <p><span class="altsTorneoDetail-fechaInscripcion">Fecha límite Inscripcion: October 10 de 2011 </span></p>
+            <p><span class="altsTorneoDetail-fechaCancelacion">Fecha límite cancelación: October 10 de 2011 </span></p>
+            <p><span class="altsTorneoDetail-fechaPago">Fecha límite Pago: October 14 de 2011 </span></p>
+
+            <br><br>
+
+            <p><span class="altsTorneoDetail-director">Director: William Portilla</span></p>
+            <p><span class="altsTorneoDetail-coodirector">Coodirector: William Portilla</span></p>
+            <p><span class="altsTorneoDetail-juez1">Juez Uno: William Portilla</span></p>
+            <p><span class="altsTorneoDetail-juez2">Juez Dos: William Portilla</span></p>
+            <p><span class="altsTorneoDetail-juez3">Jues Tres: William Portilla</span></p>
+
+            <br><br>
+
+            <h3 class="altsTorneoDetail-resolucion">RESOLUCIÓN 1550</h3>
+            <section class="info_clubes wow fadeIn altsTorneoDetail-detail"></section>
+
+              <div class="clear"></div>
+          </div>
+            <div class="clear"></div>
+           <a href="" class="btn_verde btn_incrip altsTorneo-btnInscribir" data-codtorneo="" >INSCRIBIRSE</a>
+        </div>    
+        <!--Fin Pefil-->          
+
+          <div class="clear"></div>
+      </section>
+      <!--bg degradado-->       
+      <div class="clear"></div>
+    </section>
+      <!--Fin Detalle Torneo-->
+
+
+<!--Vista 3-->
+<section class="content_all bg_internas_h" data-role="page" id="clubes">   
+  <!--bg degradado-->
+  <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+        <a href="#menu" data-rel="back" class="close_int"></a>
+          <h1>Clubes</h1> 
+        <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+      <ul class="carrusel_int1">    
+        <li class="item" id="alt-listClubes">
+          <!--Header -->
+          <section class="conten_h">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)"></a></li>
+                  <li><a href="javascript:void(0)" class="active">Listados</a></li>
+                  <li><a href="javascript:void(0)">Canchas</a></li>
+                </ul>
+              </section>
+              <section class="filtros_h elem_blancos">
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns padding_t_r">
+                      <p>Zona</p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <select name="codZona" class="alts-cmbZonas" id="club-cmbZonas">
+                        <option value="0">Todas las zonas</option>
+                      </select>
+                    </div>
+                  </article>
+                  <div class="clear"></div>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns padding_t_r">
+                      <p>Club</p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <select name="codClub" id="club-cmbClub" class="alts-cmbClub">
+                      </select>
+                    </div>
+                  </article>
+              </section>
+               <div class="clear"></div>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+          <!--Pefil-->
+          <div class="bg_perfil">
+            <div class="list_clubes wow fadeInUp">
+              <!--<div class="small-4 medium-4 large-4 columns item_club">
+                <a href="">
+                  <h3>Aposentos</h3>
+                  <img src="assets/images/logos/logo1.png" alt="">
+                </a>
+              </div> 
+              <div class="clear"></div> -->
+            </div>
+          </div>
+          <!--Fin Pefil-->
+        </li>
+        <li class="item" id="alt-listCanchas">
+          <!--Header -->
+          <section class="conten_h">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">        
+              <section class="sub_menu">
+                <ul>                  
+                  <li><a href="javascript:void(0)">Listados</a></li>
+                  <li><a href="javascript:void(0)" class="active">Canchas</a></li>
+                  <li><a href="javascript:void(0)">Patron curva</a></li>
+                </ul>
+              </section>
+              <section class="filtros_h elem_blancos">
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns padding_t_r">
+                      <p>Zona</p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <select name="" class="alts-cmbZonas">
+                        <option value="0">Todas las zonas</option>
+                      </select>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns padding_t_r">
+                      <p>Club</p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <select name="" class="alts-cmbClub">
+                        <option value="0">Todos las cubles</option>
+                      </select>
+                    </div>
+                  </article>
+              </section>
+               <div class="clear"></div>
+            </header>      
+          </section>
+          <!--Fin Header -->
+
+          <!--Pefil-->
+          <div class="bg_perfil">
+
+            <section class="info_clubes wow fadeIn">
+              <a href="#clubes_detalle-cancha" data-transition="slide">
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Zona:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Ciudad:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá D.C.</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Club:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Los Arrayanes</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Marca:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Azules</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Categoria:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Caballeros</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Tamaño:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Larga</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron campo:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>72.9</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron curva:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>126 <i></i></p>
+                    </div>
+                  </article>
+              </a>
+
+               <div class="clear"></div>
+            </section>
+
+            <section class="info_clubes wow fadeIn">
+              <a href="#clubes_detalle-cancha" data-transition="slide">
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Zona:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Ciudad:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá D.C.</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Club:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Los Arrayanes</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Marca:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Azules</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Categoria:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Caballeros</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Tamaño:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Larga</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron campo:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>72.9</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron curva:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>126 <i></i></p>
+                    </div>
+                  </article>
+              </a>
+
+               <div class="clear"></div>
+            </section>
+
+            <section class="info_clubes wow fadeIn">
+              <a href="#clubes_detalle-cancha" data-transition="slide">
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Zona:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Ciudad:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá D.C.</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Club:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Los Arrayanes</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Marca:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Azules</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Categoria:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Caballeros</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Tamaño:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Larga</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron campo:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>72.9</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron curva:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>126 <i></i></p>
+                    </div>
+                  </article>
+              </a>
+
+               <div class="clear"></div>
+            </section>
+
+            <section class="info_clubes wow fadeIn">
+              <a href="#clubes_detalle-cancha" data-transition="slide">
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Zona:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Ciudad:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Bogotá D.C.</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Club:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Los Arrayanes</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Marca:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p><span>Azules</span></p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Categoria:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Caballeros</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Tamaño:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>Larga</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron campo:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>72.9</p>
+                    </div>
+                  </article>
+                  <article class="small-12 medium-12 large-12 columns">
+                    <div class="small-4 medium-4 large-4 columns">
+                      <p><strong>Patron curva:</strong></p>
+                    </div>
+                    <div class="small-8 medium-8 large-8 columns">
+                      <p>126 <i></i></p>
+                    </div>
+                  </article>
+              </a>
+
+               <div class="clear"></div>
+            </section>
+               
+              <div class="clear"></div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Canchas</a></li>
+                  <li><a href="javascript:void(0)" class="active">Patron Curva</a></li>
+                  <li><a href="javascript:void(0)"></a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>  
+          <!--Pefil-->
+          <div class="bg_info margin_bg">
+            <h1>Patron Curva</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+                <section class="text text_dos alts-queesHandicap" >
+                    
+                </section>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li> 
+      </ul>
+    <div class="clear"></div>
+  </section>
+  <!--bg degradado-->
+    <div class="clear"></div>
+</section>
+    <!--Detalle Cancha-->
+    <section class="content_all bg_canchas" data-role="page" id="clubes_detalle-cancha"> 
+      <!--bg degradado-->
+      
+      <!--bg degradado-->   
+        <div class="clear"></div>
+    </section>
+    <!--Fin Detalle Cancha-->
+    <!-- Detalle Club-->
+    <section class="content_all bg_canchas" data-role="page" id="clubes_detalle-club"> 
+      <!--bg degradado-->
+      <!--bg degradado-->   
+        <div class="clear"></div>
+    </section>
+    <!-- Fin Detalle Club-->
+<!--Fin Vista 3-->
+
+<!--Vista 4-->
+<section class="content_all bg_internas" data-role="page" id="profesionales"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Profesionales</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+      <ul class="carrusel_int1">    
+        <li class="item">
+            <div class="clear"></div>
+
+          <!--Pefil-->
+          <div class="bg_perfil">
+            <div class="small-4 medium-4 large-4 columns">
+               <div class="img_perfil wow flipInY" data-wow-delay="0.2s">
+                  <img src="" alt="">
+               </div>
+            </div>        
+            <div class="small-8 medium-8 large-8 columns datos_perfil wow fadeInRight" data-wow-delay="0.3s">
+              <h2 id="altsProfesional-nombreGolfista"></h2>
+              <span><i><img src="assets/images/icons/icon_lugar.png" alt=""></i><div id="altsProfesional-ciudadGolfista"></div></span>          
+                <!--<a href="" class="btn_azulc">Seguir</a> -->
+                <div class="clear"></div>
+            </div> 
+              
+              <div class="clear"></div>
+
+            <div class="small-12 medium-12 large-12 columns estadis_perfil">
+              <div class="small-4 medium-4 large-4 columns">
+                <h3 id="altsProfesional-codigoGolfista"></h3>
+                <h4>Código</h4>
+              </div>  
+              <div class="small-4 medium-4 large-4 columns">
+                <h3 id="altsProfesional-indiceAnteriorGolfista"></h3>
+                <h4>Indice Anterior</h4>
+                <p>Corte a 30 de mes</p>
+              </div>  
+              <div class="small-4 medium-4 large-4 columns">
+                <h3 id="altsProfesional-indiceGolfista"></h3>
+                <h4>Indice</h4>
+              </div> 
+              <div class="small-8 medium-8 large-8 columns">          
+                <h4>Categoría:</h4>
+                <h4><strong id="altsProfesional-categoriaGolfista"></strong></h4>
+                <!--<h5>Valido hasta: <strong>07/07/07</strong></h5>-->
+              </div> 
+              <div class="small-4 medium-4 large-4 columns">
+                <div class="logo_torneo wow pulse" data-wow-delay="0.5s">
+                  <img id="altsProfesional-imgClubGolfista" src="" alt="">
+                </div>
+              </div>    
+            </div>   
+             
+              <div class="clear"></div>
+          </div>    
+          <!--Fin Pefil-->
+
+          <!--Handicap-->
+          <!--<ul class="list_hand bg_active">                    
+              <li>
+                  <div class="datos_hand">
+                     <i></i>Consulta de handicap
+                  </div>
+                  <div class="info_had">
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Fecha Juego</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>21/06/2014</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Club</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>Los Lagartos  </p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Cancha</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>David Gutierrez</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Marca</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>Azul</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Score Ajustado </strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>91</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Patron Campo</strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>72.0</p>
+                      </div>
+                    </article>
+                    <article class="small-12 medium-12 large-12 columns">
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p><strong>Patron Curva </strong></p>
+                      </div>
+                      <div class="small-6 medium-6 large-6 columns">
+                        <p>13.7</p>
+                      </div>
+                    </article>
+
+                     <div class="clear"></div>
+                  </div>
+              </li>     
+          </ul>-->
+          <!--Fin Handicap-->
+        </li>
+      </ul>
+  
+      <!--Footer-->
+      <footer data-role="footer" data-position="fixed" class="wow fadeInUp">
+        <h3>Patrocina:</h3>
+        <img src="assets/images/patrocionio2.png" alt="">
+         <div class="clear"></div>
+      </footer>  
+      <!--Fin Footer-->
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Vista 4-->
+
+<!--Vista 5-->
+<section class="content_all bg_canchas" data-role="page" id="reglas">   
+  <!--bg degradado-->
+  <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+        <a href="#menu" data-rel="back" class="close_int"></a>
+          <h1>Reglas</h1> 
+        <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+      <ul class="carrusel_int1">    
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)"></a></li>
+                  <li><a href="javascript:void(0)" class="active">¿Qué es?</a></li>
+                  <li><a href="javascript:void(0)">¿Como calcular?</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>  
+          <!--Pefil-->
+          <div class="bg_info margin_bg">
+            <h1>¿Qué es un Handicap?</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+                <section class="text text_dos alts-queesHandicap">
+                    
+                </section>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>                 
+                  <li><a href="javascript:void(0)">¿Qué es?</a></li>
+                  <li><a href="javascript:void(0)" class="active">¿Como calcular?</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>  
+          <!--Pefil-->
+          <div class="bg_info margin_bg">
+            <h1>¿Como calcular?</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+                <section class="text text_dos alts-ComoCalcular">
+                    
+                </section>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+      </ul>
+
+    </section>
+    <!--Fin bg degradado-->
+
+    <div class="clear"></div>
+</section>
+<!--Fin Vista 5-->
+
+<!--Vista 6-->
+<section class="content_all bg_canchas" data-role="page" id="handicap">   
+  <!--bg degradado-->
+  <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+        <a href="#menu" data-rel="back" class="close_int"></a>
+          <h1>Handicap</h1> 
+        <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+      <ul class="carrusel_int1">  
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)"></a></li>
+                  <li><a href="javascript:void(0)" class="active">¿Qué es?</a></li>
+                  <li><a href="javascript:void(0)">¿Como calcular?</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>  
+          <!--Pefil-->
+          <div class="bg_info margin_bg">
+            <h1>¿Qué es un Handicap?</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+                <section class="text text_dos alts-queesHandicap" >
+                    
+                </section>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>                 
+                  <li><a href="javascript:void(0)">¿Qué es?</a></li>
+                  <li><a href="javascript:void(0)" class="active">¿Como calcular?</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>  
+          <!--Pefil-->
+          <div class="bg_info margin_bg">
+            <h1>¿Como calcular?</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+                <section class="text text_dos alts-ComoCalcular">
+                    
+                </section>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+      </ul>
+
+    </section>
+    <!--Fin bg degradado-->
+
+    <div class="clear"></div>
+</section>
+<!--Fin Vista 6-->
+
+
+
+
+<!--Filtro Aficionado-->
+<section class="content_all bg_blur" data-role="page" id="filtro_aficionado"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Aficionados</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+      <ul class="carrusel_int1">    
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)"></a></li>
+                  <li><a href="javascript:void(0)" class="active">Listado Aficionados</a></li>
+                  <li><a href="javascript:void(0)">Ranking Aficionados</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+
+          <!--Filtrar-->
+          <section class="padding">
+            <div class="bg_info text_info">
+              <div class="text sin_padd">
+                <p>Para Encontrar cualquier aficionado activo, utilice los siguientes filtros y de click en Buscar.</p>
+                <p class="alts-error"></p>
+              </div>
+            </div>
+          </section>
+          <section class="ui-content" id="alts-frmAficionados">
+              <form class="elem_blancos wow fadeInUp" data-wow-delay="0.4s" action="" method="">              
+                 <article class="form_login animated fadeInUp place_blan">
+                    <fieldset class="fila">
+                       <input type="text" class="alts-inputNombre" name="name" placeholder="Primer Nombre:">
+                    </fieldset>
+                    <fieldset class="fila">
+                       <input type="text" class="alts-inputApellido" name="surname" placeholder="Primer Apellido:">
+                    </fieldset>
+                    <fieldset class="fila">
+                       <input type="text" class="alts-inputCodigo" name="codigo" placeholder="Código:">
+                    </fieldset>
+                    <fieldset class="fila select_trans">
+                      <select name="clubAficionados" id="alts-clubAficionados" class="alts-cmbClub">
+                        <option selected="selected" value="-1">Seleccione el Club</option>
+                      </select>
+                    </fieldset>
+
+                    <div class="small-12 medium-12 large-12 columns">
+                        <a href="#resultados_aficionados" data-transition="slide">
+                            <button type="submit" class="btn_azul right" id="btn-buscarAficionado" name="btnBuscarAficionados">Buscar</button>
+                        </a>
+                    </div>
+                    <!-- <a href="javascript:void(0)" class="link2 link_recup_pass">¿Olvidaste tu contraseña?</a>   -->
+                 </article>           
+              </form>
+
+          </section>
+          <!--Fin Filtrar--> 
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Listado Aficionados</a></li>
+                  <li><a href="javascript:void(0)" class="active">Ranking Aficionados</a></li>
+                  <li><a href="javascript:void(0)">Inscripción a Torneos</a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+          <!--Pefil-->
+          <div class="bg_info margin_bg wow fadeInUp" data-wow-delay="0.4s">
+            <h1>Consulta de Ranking</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+              <section class="list_ranting" id="alts-RankAf2">
+                
+              </section>
+                <div class="clear"></div>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+        <li class="item">
+          <!--Header -->
+          <section class="conten_hdos">      
+            <header data-role="header" class="wow fadeInUp" data-wow-delay="0.2s">                  
+              <section class="sub_menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Ranking</a></li>
+                  <li><a href="javascript:void(0)" class="active">Inscripción a torneos</a></li>
+                  <li><a href="javascript:void(0)"></a></li>
+                </ul>
+              </section>
+            </header>      
+          </section>
+          <!--Fin Header -->
+            <div class="clear"></div>
+          <!--Pefil-->
+          <div class="bg_info margin_bg wow fadeInUp" data-wow-delay="0.4s">
+            <h1>Inscripción a torneos</h1>
+              <div class="clear"></div>
+            <div class="text_info">
+              <section class="list_torneos">
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+                <article>
+                  <a href="#torneo" data-transition="slide">
+                   <div class="small-12 medium-12 large-12 columns">
+                     <h2><span>Campeonato Nal. Interclubes “Copa Fedegolf”</span></h2>
+                     <h2>Octubre 27 a octubre 31 de 2015</h2>
+                     <h2>Club: Pueblo VIejo</h2>
+                   </div>
+                     <div class="clear"></div>
+                  </a>
+                </article>
+              </section>
+                <div class="clear"></div>
+            </div>
+          </div>    
+          <!--Fin Pefil-->
+        </li>
+      </ul>
+  
+      <!--Footer-->
+      <footer data-role="footer" data-position="fixed" class="wow fadeInUp">
+        <h3>Patrocina:</h3>
+        <img src="assets/images/patrocionio2.png" alt="">
+         <div class="clear"></div>
+      </footer>  
+      <!--Fin Footer-->
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Filtro Aficionado-->
+
+<!--Filtro Profesional-->
+<section class="content_all bg_blur" data-role="page" id="filtro_profesional"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Filtrar Profesional</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+
+      <div class="clear"></div>
+        <div class="espacio"></div> 
+      <div class="clear"></div>
+
+      <!--Filtrar-->
+      <section class="ui-content">
+        <form class="elem_blancos wow fadeInUp" data-wow-delay="0.4s" action="" method="">              
+           <article class="form_login animated fadeInUp place_blan">
+              <fieldset class="fila">
+                 <input type="text" class="alts-inputMail" name="name" id="altsProfesion-inputNombre" placeholder="Primer Nombre">
+              </fieldset>
+              <fieldset class="fila">
+                 <input type="text" class="alts-inputPass" name="surname" id="altsProfesion-inputApellidos" placeholder="Primer Apellido:">
+              </fieldset>
+              <fieldset class="fila">
+                 <input type="text" class="alts-inputPass" name="codigo" id="altsProfesion-codigo" placeholder="Codigo Profesional:">
+              </fieldset>
+              <fieldset class="fila select_trans">
+                <select name="" class="alts-cmbClub" id="altsProfesion-inputClub">
+                  <option selected="selected" value="-1" >Seleccione Club</option>
+                </select>
+              </fieldset>
+
+              <div class="small-12 medium-12 large-12 columns">
+                  <a href="#resultados_profesionales" data-transition="slide">
+                      <button type="submit" class="btn_azul right" id="altsProfesion-btnBuscar" name="btnRegistro">Buscar</button>
+                  </a>
+              </div>
+              <!-- <a href="javascript:void(0)" class="link2 link_recup_pass">¿Olvidaste tu contraseña?</a>   -->
+           </article>           
+        </form>
+      </section>
+      <!--Fin Filtrar-->
+  
+      <!--Footer-->
+      <footer data-role="footer" data-position="fixed" class="wow fadeInUp">
+        <h3>Patrocina:</h3>
+        <img src="assets/images/patrocionio2.png" alt="">
+         <div class="clear"></div>
+      </footer>  
+      <!--Fin Footer-->
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Filtro Profesional-->
+
+<!--Rancking-->
+  <section class="content_all bg_blur" data-role="page" id="rankingAficionados2"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Resultados Ranking</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+
+      <div class="clear"></div>
+        <div class="espacio"></div> 
+      <div class="clear"></div>
+
+     <section class="padding">
+        <div class="bg_info wow fadeInUp animated" data-wow-delay="0.4s">
+            <div class="clear"></div>
+          <div class="text_info">
+                <div class="clear"></div>
+              <section class="text">
+                <p>
+                  Por favor click sobre algún dato para ver el perfil
+                </p>    
+                <table class="table_result" id="alts-tableRankingAficionado2">
+                  <thead>
+                    <tr>                 
+                      <th>Codigo</th>
+                      <th>Nombres</th>
+                      <th>Apellidos</th>
+                      <th>Club</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table> 
+
+              </section>
+          </div>
+        </div>    
+      </section>
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+
+<!--Rancking-->
+  <section class="content_all bg_blur" data-role="page" id="rankingAficionados"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Resultados Ranking</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+
+      <div class="clear"></div>
+        <div class="espacio"></div> 
+      <div class="clear"></div>
+
+     <section class="padding">
+        <div class="bg_info wow fadeInUp animated" data-wow-delay="0.4s">
+            <div class="clear"></div>
+          <div class="text_info">
+                <div class="clear"></div>
+              <section class="text">
+                <p>
+                  Por favor click sobre algún dato para ver el perfil
+                </p>    
+                <table class="table_result" id="alts-tableRankingAficionado">
+                  <thead>
+                    <tr>                 
+                      <th>Codigo</th>
+                      <th>Nombres</th>
+                      <th>Apellidos</th>
+                      <th>Club</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table> 
+
+              </section>
+          </div>
+        </div>    
+      </section>
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Ranking-->
+
+<!--Resultado Busqueda Aficionados-->
+<section class="content_all bg_blur" data-role="page" id="resultados_aficionados"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Resultados busqueda</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+
+      <div class="clear"></div>
+        <div class="espacio"></div> 
+      <div class="clear"></div>
+
+     <section class="padding">
+        <div class="bg_info wow fadeInUp animated" data-wow-delay="0.4s">
+            <div class="clear"></div>
+          <div class="text_info">
+                <div class="clear"></div>
+              <section class="text">
+                <p>
+                  Por favor click sobre algún dato para ver el perfil
+                </p>    
+                <table class="table_result" id="alts-tableAficionado">
+                  <thead>
+                    <tr>                 
+                      <th width="40">Codigo</th>
+                      <th>Nombres</th>
+                      <th>Apellidos</th>
+                      <th>Club</th>
+                      <th width="60">Edad</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                  </tbody>
+                </table> 
+
+              </section>
+          </div>
+        </div>    
+      </section>
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Resultado Busqueda Aficionados-->
+
+<!--Resultado Busqueda Profesionales-->
+<section class="content_all bg_blur" data-role="page" id="resultados_profesionales"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Resultados busqueda</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+
+      <div class="clear"></div>
+        <div class="espacio"></div> 
+      <div class="clear"></div>
+
+     <section class="padding">
+        <div class="bg_info wow fadeInUp animated" data-wow-delay="0.4s">
+            <div class="clear"></div>
+          <div class="text_info">
+                <div class="clear"></div>
+              <section class="text">
+                <p>
+                  Click en el resultado para ver la hoja de vida del Profesional.
+                </p>    
+
+                <table class="table_result" id="alts-tableProfesionales">
+                  <thead>
+                    <tr>                 
+                      <th width="40">Codigo</th>
+                      <th>Nombres</th>
+                      <th>Apellidos</th>
+                      <th>Club</th>
+                      <th width="60">Edad</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><a href="#profesionales" data-transition="slide">235</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Manuel</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Ramirez Suaza</a></td>
+                      <td><a href="#profesionales" data-transition="slide">CC Medellin</a></td>
+                      <td><a href="#profesionales" data-transition="slide">23</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#profesionales" data-transition="slide">235</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Manuel</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Villalba</a></td>
+                      <td><a href="#profesionales" data-transition="slide">CC Medellin</a></td>
+                      <td><a href="#profesionales" data-transition="slide">23</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#profesionales" data-transition="slide">235</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Manuel</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Ramirez Suaza</a></td>
+                      <td><a href="#profesionales" data-transition="slide">CC Medellin</a></td>
+                      <td><a href="#profesionales" data-transition="slide">23</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#profesionales" data-transition="slide">235</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Manuel</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Villalba</a></td>
+                      <td><a href="#profesionales" data-transition="slide">CC Medellin</a></td>
+                      <td><a href="#profesionales" data-transition="slide">23</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#profesionales" data-transition="slide">235</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Manuel</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Ramirez Suaza</a></td>
+                      <td><a href="#profesionales" data-transition="slide">CC Medellin</a></td>
+                      <td><a href="#profesionales" data-transition="slide">23</a></td>
+                    </tr>
+                    <tr>
+                      <td><a href="#profesionales" data-transition="slide">235</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Manuel</a></td>
+                      <td><a href="#profesionales" data-transition="slide">Villalba</a></td>
+                      <td><a href="#profesionales" data-transition="slide">CC Medellin</a></td>
+                      <td><a href="#profesionales" data-transition="slide">23</a></td>
+                    </tr>
+                  </tbody>
+                </table> 
+
+              </section>
+          </div>
+        </div>    
+      </section>
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Resultado Busqueda Profesionales-->
+
+<!--Formulario de Registro-->
+<section class="content_all bg_blur" data-role="page" id="registrarse"> 
+    <!--bg degradado-->
+    <section class="bg_deg">
+      <div class="titulo titulo_c wow fadeInDown">
+          <a href="#menu" data-rel="back" class="close_int"></a>
+            <h1>Registrarse</h1> 
+          <a href="#menu" data-rel="back" class="btn_top"></a>
+         <div class="clear"></div>
+      </div> 
+
+      <div class="clear"></div>
+        <div class="espacio"></div> 
+      <div class="clear"></div>
+
+      <!--Filtrar-->
+      <section class="padding">
+        <div class="bg_info text_info">
+          <div class="text sin_padd">
+            <p>Para hacer parte de FEDEGOLF ingresa tus datos en los siguientes campos y disfruta de todo lo que te ofrece nuestra APP.</p>
+          </div>
+        </div>
+      </section>
+      <section class="ui-content">
+        <form class="elem_blancos wow fadeInUp" data-wow-delay="0.4s" action="" method="">
+           <article class="form_login animated fadeInUp place_blan">
+              <fieldset class="fila">
+                 <input type="text" class="alts-inputMail" name="name" placeholder="Nombre de usuario">
+              </fieldset>
+              <fieldset class="fila">
+                 <input type="text" class="alts-inputPass" name="email" placeholder="Correo electrónico">
+              </fieldset>
+              <fieldset class="fila">
+                 <input type="password" class="alts-inputPass" name="Login[password]" placeholder="Contraseña">
+              </fieldset>
+
+              <div class="small-6 medium-6 large-6 columns padding_r">
+                  <a href="#menu" data-rel="back">
+                      <button type="submit" class="btn_azul alts-btnLogin" name="btnLogin">Cancelar</button>
+                  </a>
+              </div>
+              <div class="small-6 medium-6 large-6 columns padding_l">
+                  <a href="#menu_logueado" data-transition="pop">
+                      <button type="submit" class="btn_azul right" name="btnRegistro">Registrarme</button>
+                  </a>
+              </div>
+              <!-- <a href="javascript:void(0)" class="link2 link_recup_pass">¿Olvidaste tu contraseña?</a>   -->
+           </article>           
+        </form>
+      </section>
+      <!--Fin Filtrar-->
+  
+      <!--Footer-->
+      <footer data-role="footer" data-position="fixed" class="wow fadeInUp">
+        <h3>Patrocina:</h3>
+        <img src="assets/images/patrocionio2.png" alt="">
+         <div class="clear"></div>
+      </footer>  
+      <!--Fin Footer-->
+
+        <div class="clear"></div>
+    </section>
+    <!--bg degradado-->       
+  <div class="clear"></div>
+</section>
+<!--Fin Formulario de Registro-->
+
+</body>
+</html>
